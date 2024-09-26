@@ -5,7 +5,7 @@
  * Generated linker script file for MK64FN1M0xxx12
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v11.10.0 [Build 3148] [2024-07-03] on Sep 25, 2024, 6:24:34 PM
+ * MCUXpresso IDE v11.10.0 [Build 3148] [2024-07-03] on Sep 26, 2024, 2:02:58 AM
  */
 
 INCLUDE "Practice1_752964_lwip_tcpecho_freertos_Debug_library.ld"
@@ -57,7 +57,6 @@ SECTIONS
         /* End of Kinetis Flash Configuration data */
         
        *(.text*)
-       KEEP(*freertos*/tasks.o(.rodata*)) /* FreeRTOS Debug Config */
        *(.rodata .rodata.* .constdata .constdata.*)
        . = ALIGN(8);
     } > PROGRAM_FLASH
@@ -234,7 +233,7 @@ SECTIONS
     } > SRAM_UPPER AT> SRAM_UPPER
 
     /* Reserve and place Heap within memory map */
-    _HeapSize = 0x6400;
+    _HeapSize = 0x1000;
     .heap (NOLOAD) :  ALIGN(8)
     {
         _pvHeapStart = .;
@@ -243,7 +242,7 @@ SECTIONS
         _pvHeapLimit = .;
     } > SRAM_UPPER
 
-     _StackSize = 0x800;
+     _StackSize = 0x1000;
      /* Reserve space in memory for Stack */
     .heap2stackfill (NOLOAD) :
     {
