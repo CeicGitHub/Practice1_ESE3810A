@@ -5,7 +5,7 @@
  * Generated linker script file for MK64FN1M0xxx12
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v11.10.0 [Build 3148] [2024-07-03] on Sep 26, 2024, 2:09:46 AM
+ * MCUXpresso IDE v11.10.0 [Build 3148] [2024-07-03] on Sep 26, 2024, 11:34:05 AM
  */
 
 INCLUDE "Practice1_752964_lwip_tcpecho_freertos_Debug_library.ld"
@@ -57,6 +57,7 @@ SECTIONS
         /* End of Kinetis Flash Configuration data */
         
        *(.text*)
+       KEEP(*freertos*/tasks.o(.rodata*)) /* FreeRTOS Debug Config */
        *(.rodata .rodata.* .constdata .constdata.*)
        . = ALIGN(8);
     } > PROGRAM_FLASH

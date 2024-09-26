@@ -1,16 +1,12 @@
 
-
 #include "../Custom_ENET_layer/custom_enet_layer.h"
-
 #include "pin_mux.h"
 #include "board.h"
 #include "fsl_debug_console.h"
 #include "fsl_enet.h"
 #include "stdlib.h"
-
 #include "fsl_common.h"
 #include "fsl_crc.h"
-
 #include "../Custom_ENET_layer/AES128/aes.h"
 #include "../Custom_ENET_layer/ENET_Drivers/CMSIS_driver/Driver_ETH_MAC.h"
 #include "../Custom_ENET_layer/ENET_Drivers/fsl_enet_cmsis.h"
@@ -23,9 +19,6 @@
 
 
 
-/*******************************************************************************
- * Variables
- ******************************************************************************/
 uint8_t g_frame[ENET_DATA_LENGTH + 14];
 volatile uint32_t g_testTxNum  = 0;
 uint8_t source_macAddr[6]           = SOURCE_MAC_ADDRESS;
@@ -46,15 +39,11 @@ uint8_t key[] = AES128_KEY;
 uint8_t iv[] = AES128_IV;
 struct AES_ctx ctx;
 
-/*******************************************************************************
- * Code
- ******************************************************************************/
+
 mdio_handle_t mdioHandle = {.ops = &enet_ops};
 phy_handle_t phyHandle   = {.phyAddr = RTE_ENET_PHY_ADDRESS, .mdioHandle = &mdioHandle, .ops = &phyksz8081_ops};
 
-/*******************************************************************************
- * Static functions
- ******************************************************************************/
+
 uint32_t ENET0_GetFreq(void)
 {
     return CLOCK_GetFreq(kCLOCK_CoreSysClk);
@@ -83,7 +72,7 @@ uint32_t Compute_Padding(uint8_t *data, uint32_t len)
 
 static void aes128_init()
 {
-	// Init the AES context structure
+	// Init_AES context
 	AES_init_ctx_iv(&ctx, key, iv);
 
 }
@@ -104,19 +93,11 @@ static uint32_t aes128_encrypt(uint8_t *data, uint32_t len, uint8_t *output_arra
 	return padded_len;
 }
 
-
-/*!
- * @brief Init for CRC-32.
- * @details Init CRC peripheral module for CRC-32 protocol.
- *          width=32 poly=0x04c11db7 init=0xffffffff refin=true refout=true xorout=0xffffffff check=0xcbf43926
- *          name="CRC-32"
- *          http://reveng.sourceforge.net/crc-catalogue/
- */
-static void InitCrc32(CRC_Type *base, uint32_t seed)
+static void InitCrc32(CRC_Type *base, uint32_t seed) //Pointerto_CRC_Type
 {
-    crc_config_t config;
+    crc_config_t config; //SaveParameters
 
-    config.polynomial         = 0x04C11DB7U;
+    config.polynomial         = 0x04C11DB7U; //PolynomialStandar
     config.seed               = seed;
     config.reflectIn          = true;
     config.reflectOut         = true;
@@ -162,8 +143,6 @@ uint8_t verifyDataCRC(uint8_t *data, uint32_t size)
 }
 
 
-
-/*! @brief Build Frame for transmit. */
 static uint32_t ENET_BuildBroadCastFrame(uint8_t *data, uint32_t len)
 {
 	uint32_t data_len = 0;
@@ -208,9 +187,6 @@ static uint32_t ENET_BuildBroadCastFrame(uint8_t *data, uint32_t len)
 }
 
 
-
-
-
 void Custom_ENET_Layer_Receive_Cb(uint32_t event)
 {
 	uint32_t size;
@@ -246,7 +222,7 @@ void Custom_ENET_Layer_Receive_Cb(uint32_t event)
 							// Subtract the MAC header and the CRC32 size
 							data_len = (data[12] << 8 | data[13]) - 4;
 
-							// Restart the ecryption module
+							// Restart the_ecryption_module
 							aes128_init();
 
 							memset(prueba, 0, sizeof(prueba));
@@ -267,7 +243,7 @@ void Custom_ENET_Layer_Receive_Cb(uint32_t event)
 						}
 						else
 						{
-							PRINTF("ErrorCRC32!\r\n");
+							PRINTF("If it gets here, CRC32 is incorrect!\r\n");
 						}
 					}
 				}
@@ -280,18 +256,6 @@ void Custom_ENET_Layer_Receive_Cb(uint32_t event)
 }
 
 
-
-/*******************************************************************************
- * Custom Layer APIs
- ******************************************************************************/
-
-/*!
- * @brief Initializes the Custom Ethernet layer
- *
- * Call this API to initialize the Ethernet custom later
- *
- * @param cb_funct     Function pointer to the receive callback
- */
 void Custom_ENET_Layer_Init(receive_cb_function cb_func)
 {
 	// Save user's receive callback
@@ -302,7 +266,7 @@ void Custom_ENET_Layer_Init(receive_cb_function cb_func)
 
     ARM_ETH_LINK_INFO linkInfo;
 
-    /* Disable SYSMPU. */
+    //Disable_SYSMPU
     SYSMPU_Enable(SYSMPU, false);
 
     mdioHandle.resource.base        = ENET;
@@ -310,7 +274,7 @@ void Custom_ENET_Layer_Init(receive_cb_function cb_func)
 
     PRINTF("\r\nENET example start.\r\n");
 
-    /* Initialize the ENET module. */
+    //InitENETModule
     EXAMPLE_ENET.Initialize(Custom_ENET_Layer_Receive_Cb);
     EXAMPLE_ENET.PowerControl(ARM_POWER_FULL);
     EXAMPLE_ENET.SetMacAddress((ARM_ETH_MAC_ADDR *)source_macAddr);
@@ -351,22 +315,12 @@ void Custom_ENET_Layer_Init(receive_cb_function cb_func)
 }
 
 
-/*!
- * @brief Transmits a message using the custom Ethernet layer
- *
- * Call this API to transmit data through the custom Ethernet layer.
- * 	The message will be encrypted using AES128 and will have an extra
- * 	verification step by using CRC32
- *
- * @param data     	Pointer to the data array.
- * @param len   	Length of the data to be transmitted
- */
 void Custom_ENET_Layer_Transmit(uint8_t *data, uint32_t len)
 {
 	uint32_t BroadCastFrame_Size=0;
 	flagReception = 0;
 
-	SDK_DelayAtLeastUs(1000000, SDK_DEVICE_MAXIMUM_CPU_CLOCK_FREQUENCY);
+	SDK_DelayAtLeastUs(1000000, SDK_DEVICE_MAXIMUM_CPU_CLOCK_FREQUENCY); //DelayForSeeTheMessages
 
 	// Assembly output frame
 	BroadCastFrame_Size = ENET_BuildBroadCastFrame(data, len);

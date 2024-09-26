@@ -8,9 +8,8 @@
 #include "clock_config.h"
 #include "MK64F12.h"
 #include "fsl_debug_console.h"
-#include <string.h>  // ForUse_strlen
-
 #include "../Custom_ENET_layer/custom_enet_layer.h"
+#include <string.h>  // ForUse_strlen
 
 // FunctionCallback_Data_BufferReceiveTerminal
 void application_callback(uint8_t *data, uint32_t len)
@@ -35,12 +34,12 @@ int main(void) {
 
     //MessagesToTransmit
     const char *messages[] = {
-        "Pikachu Yo Te Elijo_y a ti charizard",
-        "Convoco a Exodia",
-        "Es facil perder la calma, mas dificil mantenerla",
-        "El mundo no es tan malo como piensas_Celty",
-        "Los suenos comienzan cuando se cree en ellos",
-        "Confia en el corazon de las cartas",
+        "CesarEduardoIndaCeniceros752964",
+        "Iteso Universidad Jesuita De Guadalajara",
+        "Pikachu_Yo_Te_Elijo",
+        "Me-convertire-En-Un-Maestro-Pokemon",
+        "Confiare_En_El_Corazon_De_Las_Cartas",
+        "Mis_Amigos_Nunca_Seran_Una_Perdida_De_Tiempo",
         "GOKU ERES EL NUMERO 1",
         "COMIENZA A TEMBLAR FREEZER POR QUE CONOCERAS AL SUPER SAIYATIN QUE TANTO HAS TEMIDO"
     };
