@@ -1,7 +1,7 @@
 //CesarInda_752964
 //EthenetLayer_tcp_ip_drivers
-#ifndef CUSTOM_ENET_LAYER_CONFIG_H_
-#define CUSTOM_ENET_LAYER_CONFIG_H_
+#ifndef PROTECTION_CFG_H_
+#define PROTECTION_CFG_H_
 
 /* ENET base address */
 #define EXAMPLE_ENET     Driver_ETH_MAC0
@@ -22,4 +22,4 @@
 //#define DESTINATION_MAC_ADDRESS {0xff, 0xff, 0xff, 0xff, 0xff, 0xff}
 #endif
 
-#endif /* CUSTOM_ENET_LAYER_CONFIG_H_ */
+#endif /* PROTECTION_CFG_H_ */

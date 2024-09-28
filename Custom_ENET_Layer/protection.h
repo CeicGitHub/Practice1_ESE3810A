@@ -1,10 +1,11 @@
 //CesarEduardoIndaCeniceros_752964
 
-#ifndef CUSTOM_ENET_LAYER_H_
-#define CUSTOM_ENET_LAYER_H_
+#ifndef PROTECTION_H_
+#define PROTECTION_H_
 
 #include "board.h"	//Clocks,GPIO,Ports
-#include "../Custom_ENET_layer/custom_enet_layer_config.h" //Drivers,MAC,AES128KEY
+
+#include "../Custom_ENET_Layer/protection_cfg.h" //Drivers,MAC,AES128KEY
 
 typedef void receive_cb_function(uint8_t *data, uint32_t len);
 
@@ -22,4 +23,4 @@ void Custom_ENET_Layer_Init(receive_cb_function cb_func);
 void Custom_ENET_Layer_Transmit(uint8_t *data, uint32_t len);
 
 
-#endif /* CUSTOM_ENET_LAYER_H_ */
+#endif /* PROTECTION_H_ */

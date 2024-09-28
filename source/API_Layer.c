@@ -8,8 +8,9 @@
 #include "clock_config.h"
 #include "MK64F12.h"
 #include "fsl_debug_console.h"
-#include "../Custom_ENET_layer/custom_enet_layer.h"
 #include <string.h>  // ForUse_strlen
+
+#include "../Custom_ENET_Layer/protection.h"
 
 // FunctionCallback_Data_BufferReceiveTerminal
 void application_callback(uint8_t *data, uint32_t len)

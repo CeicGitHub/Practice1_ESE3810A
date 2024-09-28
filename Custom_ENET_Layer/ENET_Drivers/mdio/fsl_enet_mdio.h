@@ -10,7 +10,7 @@
 
 #include "fsl_enet.h"
 
-#include "../../../Custom_ENET_layer/ENET_Drivers/mdio/fsl_mdio.h"
+#include "../../../Custom_ENET_Layer/ENET_Drivers/mdio/fsl_mdio.h"
 
 /*******************************************************************************
  * Definitions

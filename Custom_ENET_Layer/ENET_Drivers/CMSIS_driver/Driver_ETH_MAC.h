@@ -57,7 +57,7 @@ extern "C"
 {
 #endif
 
-#include "../../../Custom_ENET_layer/ENET_Drivers/CMSIS_driver/Driver_ETH.h"
+#include "../../../Custom_ENET_Layer/ENET_Drivers/CMSIS_driver/Driver_ETH.h"
 
 #define ARM_ETH_MAC_API_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(2,1)  /* API version */
 

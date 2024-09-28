@@ -1,5 +1,4 @@
-
-#include "../Custom_ENET_layer/custom_enet_layer.h"
+#include "../Custom_ENET_Layer/protection.h"
 #include "pin_mux.h"
 #include "board.h"
 #include "fsl_debug_console.h"
@@ -7,17 +6,15 @@
 #include "stdlib.h"
 #include "fsl_common.h"
 #include "fsl_crc.h"
-#include "../Custom_ENET_layer/AES128/aes.h"
-#include "../Custom_ENET_layer/ENET_Drivers/CMSIS_driver/Driver_ETH_MAC.h"
-#include "../Custom_ENET_layer/ENET_Drivers/fsl_enet_cmsis.h"
-#include "../Custom_ENET_layer/ENET_Drivers/fsl_enet_phy_cmsis.h"
-#include "../Custom_ENET_layer/ENET_Drivers/fsl_sysmpu.h"
-#include "../Custom_ENET_layer/ENET_Drivers/mdio/fsl_enet_mdio.h"
-#include "../Custom_ENET_layer/ENET_Drivers/phy/fsl_phy.h"
-#include "../Custom_ENET_layer/ENET_Drivers/phy/fsl_phyksz8081.h"
-#include "../Custom_ENET_layer/ENET_Drivers/RTE_Device.h"
-
-
+#include "aes.h"
+#include "../Custom_ENET_Layer/ENET_Drivers/CMSIS_driver/Driver_ETH_MAC.h"
+#include "../Custom_ENET_Layer/ENET_Drivers/fsl_enet_cmsis.h"
+#include "../Custom_ENET_Layer/ENET_Drivers/fsl_enet_phy_cmsis.h"
+#include "../Custom_ENET_Layer/ENET_Drivers/fsl_sysmpu.h"
+#include "../Custom_ENET_Layer/ENET_Drivers/mdio/fsl_enet_mdio.h"
+#include "../Custom_ENET_Layer/ENET_Drivers/phy/fsl_phy.h"
+#include "../Custom_ENET_Layer/ENET_Drivers/phy/fsl_phyksz8081.h"
+#include "../Custom_ENET_Layer/ENET_Drivers/RTE_Device.h"
 
 uint8_t g_frame[ENET_DATA_LENGTH + 14];
 volatile uint32_t g_testTxNum  = 0;

@@ -6,7 +6,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-#include "../../Custom_ENET_layer/ENET_Drivers/fsl_sysmpu.h"
+#include "../../Custom_ENET_Layer/ENET_Drivers/fsl_sysmpu.h"
 
 /* Component ID definition, used by tools. */
 #ifndef FSL_COMPONENT_ID

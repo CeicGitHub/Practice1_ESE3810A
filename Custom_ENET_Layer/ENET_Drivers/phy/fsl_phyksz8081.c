@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-#include "../../../Custom_ENET_layer/ENET_Drivers/phy/fsl_phyksz8081.h"
+#include "../../../Custom_ENET_Layer/ENET_Drivers/phy/fsl_phyksz8081.h"
 
 /*******************************************************************************
  * Definitions

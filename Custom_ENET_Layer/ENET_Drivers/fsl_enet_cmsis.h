@@ -18,18 +18,24 @@
  * limitations under the License.
  */
 
-#ifndef _FSL_ENET_PHY_CMSIS_H_
-#define _FSL_ENET_PHY_CMSIS_H_
+#ifndef _FSL_ENET_CMSIS_H_
+#define _FSL_ENET_CMSIS_H_
+
 #include "fsl_common.h"
+#include "fsl_enet.h"
 
-#include "../../Custom_ENET_layer/ENET_Drivers/CMSIS_driver/Driver_ETH.h"
-#include "../../Custom_ENET_layer/ENET_Drivers/CMSIS_driver/Driver_ETH_PHY.h"
-#include "../../Custom_ENET_layer/ENET_Drivers/phy/fsl_phy.h"
-#include "../../Custom_ENET_layer/ENET_Drivers/RTE_Device.h"
+#include "../../Custom_ENET_Layer/ENET_Drivers/CMSIS_driver/Driver_ETH.h"
+#include "../../Custom_ENET_Layer/ENET_Drivers/CMSIS_driver/Driver_ETH_MAC.h"
+#include "../../Custom_ENET_Layer/ENET_Drivers/RTE_Device.h"
 
-extern phy_handle_t phyHandle;
+/* ENET Driver state flags */
+#define ENET_FLAG_UNINIT     (0U)
+#define ENET_FLAG_INIT       (1U << 0)
+#define ENET_FLAG_POWER      (1U << 1)
+#define ETH_MAC_EVENT_OTHERS (ARM_ETH_MAC_EVENT_TIMER_ALARM + 1U)
 
-#if RTE_ENET
-extern ARM_DRIVER_ETH_PHY Driver_ETH_PHY0;
-#endif
+extern ARM_DRIVER_ETH_MAC Driver_ETH_MAC0;
+
+extern uint32_t ENET0_GetFreq(void);
+
 #endif

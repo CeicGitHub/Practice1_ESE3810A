@@ -7,7 +7,7 @@
 #ifndef _FSL_PHY_H_
 #define _FSL_PHY_H_
 
-#include "../../../Custom_ENET_layer/ENET_Drivers/mdio/fsl_mdio.h"
+#include "../../../Custom_ENET_Layer/ENET_Drivers/mdio/fsl_mdio.h"
 
 /*! @note The following PHY registers are the IEEE802.3 standard definition, same register and bit field may
           have different names in various PHYs, but the feature they represent should be same or very similar. */

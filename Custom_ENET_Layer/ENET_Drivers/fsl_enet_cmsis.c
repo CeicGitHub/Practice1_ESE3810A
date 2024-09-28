@@ -18,7 +18,7 @@
  * limitations under the License.
  */
 
-#include "../../Custom_ENET_layer/ENET_Drivers/fsl_enet_cmsis.h"
+#include "../../Custom_ENET_Layer/ENET_Drivers/fsl_enet_cmsis.h"
 
 /* Component ID definition, used by tools. */
 #ifndef FSL_COMPONENT_ID

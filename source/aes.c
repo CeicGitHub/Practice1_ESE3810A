@@ -35,9 +35,8 @@ NOTE:   String length must be evenly divisible by 16byte (str_len % 16 == 0)
 /*****************************************************************************/
 /* Includes:                                                                 */
 /*****************************************************************************/
-#include "../../Custom_ENET_layer/AES128/aes.h"
-
 #include <string.h> // CBC mode, for memset
+#include "aes.h"
 
 /*****************************************************************************/
 /* Defines:                                                                  */

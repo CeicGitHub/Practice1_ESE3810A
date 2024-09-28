@@ -17,11 +17,10 @@ RM := rm -rf
 -include component/serial_manager/subdir.mk
 -include component/lists/subdir.mk
 -include board/subdir.mk
--include Custom_ENET_layer/ENET_Drivers/phy/subdir.mk
--include Custom_ENET_layer/ENET_Drivers/mdio/subdir.mk
--include Custom_ENET_layer/ENET_Drivers/subdir.mk
--include Custom_ENET_layer/AES128/subdir.mk
--include Custom_ENET_layer/subdir.mk
+-include Custom_ENET_Layer/ENET_Drivers/phy/subdir.mk
+-include Custom_ENET_Layer/ENET_Drivers/mdio/subdir.mk
+-include Custom_ENET_Layer/ENET_Drivers/subdir.mk
+-include Custom_ENET_Layer/subdir.mk
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(C_DEPS)),)
 -include $(C_DEPS)

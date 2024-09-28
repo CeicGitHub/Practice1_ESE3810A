@@ -22,7 +22,7 @@
 #ifndef _FSL_PHYKSZ8081_H_
 #define _FSL_PHYKSZ8081_H_
 
-#include "../../../Custom_ENET_layer/ENET_Drivers/phy/fsl_phy.h"
+#include "../../../Custom_ENET_Layer/ENET_Drivers/phy/fsl_phy.h"
 
 /*!
  * @addtogroup phy_driver

@@ -325,9 +325,8 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="CMSIS"/>
-						<entry excluding="AES128|ENET_Drivers|Drivers" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Custom_ENET_layer"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Custom_ENET_layer/AES128"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Custom_ENET_layer/ENET_Drivers"/>
+						<entry excluding="AES128|ENET_Drivers|Drivers" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Custom_ENET_Layer"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Custom_ENET_Layer/ENET_Drivers"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="board"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="component"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="device"/>
@@ -652,9 +651,8 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="CMSIS"/>
-						<entry excluding="AES128|ENET_Drivers|Drivers" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Custom_ENET_layer"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Custom_ENET_layer/AES128"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Custom_ENET_layer/ENET_Drivers"/>
+						<entry excluding="AES128|ENET_Drivers|Drivers" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Custom_ENET_Layer"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Custom_ENET_Layer/ENET_Drivers"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="board"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="component"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="device"/>

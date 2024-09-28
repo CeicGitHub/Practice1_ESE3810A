@@ -36,7 +36,7 @@
 #ifndef DRIVER_ETH_H_
 #define DRIVER_ETH_H_
 
-#include "../../../Custom_ENET_layer/ENET_Drivers/CMSIS_driver/Driver_Common.h"
+#include "../../../Custom_ENET_Layer/ENET_Drivers/CMSIS_driver/Driver_Common.h"
 
 /**
 \brief Ethernet Media Interface type

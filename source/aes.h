@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include <stddef.h>
 
+// #define the macros below to 1/0 to enable/disable the mode of operation.
+//
 // CBC enables AES encryption in CBC-mode of operation.
 // CTR enables encryption in counter-mode.
 // ECB enables the basic ECB 16-byte block algorithm. All can be enabled simultaneously.
@@ -84,9 +86,6 @@ void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, size_t length);
 void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, size_t length);
 
 #endif // #if defined(CTR) && (CTR == 1)
-
-
-
 
 
 #endif // _AES_H_
