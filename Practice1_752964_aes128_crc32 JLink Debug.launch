@@ -24,7 +24,7 @@
     <stringAttribute key="com.nxp.mcuxpresso.segger.init.register" value="-noir"/>
     <stringAttribute key="com.nxp.mcuxpresso.segger.jlinkscriptfile" value=""/>
     <stringAttribute key="com.nxp.mcuxpresso.segger.options" value=""/>
-    <intAttribute key="com.nxp.mcuxpresso.segger.port" value="2336"/>
+    <intAttribute key="com.nxp.mcuxpresso.segger.port" value="2331"/>
     <booleanAttribute key="com.nxp.mcuxpresso.segger.powertarget 50" value="false"/>
     <stringAttribute key="com.nxp.mcuxpresso.segger.reset" value="true;"/>
     <stringAttribute key="com.nxp.mcuxpresso.segger.rtos" value="false;GDBServer/RTOSPlugin_FreeRTOS"/>
@@ -32,8 +32,8 @@
     <stringAttribute key="com.nxp.mcuxpresso.segger.silent" value="-nosilent"/>
     <stringAttribute key="com.nxp.mcuxpresso.segger.singlerun" value="-singlerun"/>
     <stringAttribute key="com.nxp.mcuxpresso.segger.speed" value="fixed 4000"/>
-    <intAttribute key="com.nxp.mcuxpresso.segger.swoport" value="2334"/>
-    <intAttribute key="com.nxp.mcuxpresso.segger.telnetport" value="2335"/>
+    <intAttribute key="com.nxp.mcuxpresso.segger.swoport" value="2332"/>
+    <intAttribute key="com.nxp.mcuxpresso.segger.telnetport" value="2333"/>
     <stringAttribute key="com.nxp.mcuxpresso.segger.verify" value="-vd"/>
     <stringAttribute key="disconnect" value="Run"/>
     <stringAttribute key="launch.config.handler" value="com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchConfigHandler"/>
@@ -48,7 +48,7 @@
     <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.loadImage" value="true"/>
     <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.loadSymbols" value="true"/>
     <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.pcRegister" value=""/>
-    <intAttribute key="org.eclipse.cdt.debug.gdbjtag.core.portNumber" value="2336"/>
+    <intAttribute key="org.eclipse.cdt.debug.gdbjtag.core.portNumber" value="2331"/>
     <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.runCommands" value=""/>
     <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setPcRegister" value="false"/>
     <booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setResume" value="false"/>
@@ -72,12 +72,12 @@
     <booleanAttribute key="org.eclipse.cdt.dsf.gdb.UPDATE_THREADLIST_ON_SUSPEND" value="false"/>
     <intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="2"/>
     <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="remote"/>
-    <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug\Practice1_752964_lwip_tcpecho_freertos.axf"/>
-    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="Practice1_752964_lwip_tcpecho_freertos"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug\Practice1_752964_aes128_crc32.axf"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="Practice1_752964_aes128_crc32"/>
     <booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="false"/>
     <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="com.crt.advproject.config.exe.debug.1261923852"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/Practice1_752964_lwip_tcpecho_freertos"/>
+        <listEntry value="/Practice1_752964_aes128_crc32"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="4"/>

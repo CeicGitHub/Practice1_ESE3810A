@@ -191,10 +191,10 @@ void Custom_ENET_Layer_Receive_Cb(uint32_t event)
 {
 	uint32_t size;
 	uint32_t len;
-	uint32_t len_wo_padding;
 	uint32_t data_len;
 	uint8_t *data;
 	uint8_t prueba[400];
+	//uint32_t len_wo_padding;
 
 	if (event == ARM_ETH_MAC_EVENT_RX_FRAME)
 	{
